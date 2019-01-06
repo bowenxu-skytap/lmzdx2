@@ -18,7 +18,21 @@
   text-decoration: none;
   background-color: inherit;
 }
+
+.nav-item {
+  font-size: 1.2em;
+}
+
 .nav-item:hover {
   background-color:inherit;
   font-weight: bold;
+}
+
+.btn-extra {
+  font-size: 1.7em;
+  background-color: lightgreen;
+}
+
+.table {
+  margin-top: 20px;
 }
