@@ -1,2 +1,50 @@
 <% provide(:title, "测试注册新用户") %>
 <h2>测试注册新用户</h2>
+<%= render 'shared/errors', obj: @user %>
+
+<div class="row">
+  <div class="col-sm-12">
+    <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+        <div class="form-group" >
+          <div class="control-label col-sm-1">
+            <%= f.label :name, "用户名" %>
+          </div>
+          <div class="col-sm-11">
+            <%= f.text_field :name, class: "form-control", placeholder: "请输入用户名", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="control-label col-sm-1">
+            <%= f.label :email, "电子邮件" %>
+          </div>
+          <div class="col-sm-11">
+            <%= f.email_field :email, class: "form-control", placeholder: "请输入电子邮件", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="control-label col-sm-1">
+            <%= f.label :password, "密码" %>
+          </div>
+          <div class="col-sm-11">
+            <%= f.password_field :password, class: "form-control", placeholder: "请输入密码", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="control-label col-sm-1">
+            <%= f.label :password_confirmation, "确认密码" %>
+          </div>
+          <div class="col-sm-11">
+            <%= f.password_field :password_confirmation, class: "form-control", placeholder: "请确认输入密码", autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div align="center">
+            <p><%= f.submit("创建新用户", class: "btn btn-primary btn-lg") %></p>
+          </div>
+        </div>
+    <% end %>
+    <div align="center">
+      [ <%= link_to '返回用户列表', users_path %> ]
+    </div>
+  </div>
+</div>

@@ -1,12 +1,11 @@
-@import "bootstrap";
+$navbar-default-bg: lightblue;
 
-.navbar {
-  background: lightblue;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 #logo {
   float: left;
-  font-size: 1.7em;
+  font-size: 2em;
   color: green;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -19,13 +18,14 @@
   background-color: inherit;
 }
 
-.nav-item {
-  font-size: 1.2em;
+.nav.navbar-nav.navbar-right li a {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: red;
 }
 
-.nav-item:hover {
-  background-color:inherit;
-  font-weight: bold;
+.nav.navbar-nav.navbar-right li a:hover {
+  background-color: black;
 }
 
 .btn-extra {
