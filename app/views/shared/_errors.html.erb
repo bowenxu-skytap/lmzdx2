@@ -4,8 +4,7 @@
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h2 class="panel-title">
-            <%= pluralize(obj.errors.count, "error") %>
-            prohibited this form from being submitted:
+            这个表单总共有 <%= @user.errors.count %> 个错误
           </h2>
           <div class="panel-body">
             <ul>
